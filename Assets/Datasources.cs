@@ -15,40 +15,40 @@ namespace MangoRPG_APP.Assets
             weaponList.Add(new Weapon()
             {
                 Lv = 1,
-                Name = "树枝",
-                atk = 1,
-                matk = 1,
-                itemType = ItemType.武器,
-                Description = "于哲的小树枝",
-                Count = 1,
-                Price = 100,
-                SellPrice = 1
-            });
-
-            weaponList.Add(new Weapon()
-            {
-                Lv = 1,
-                Name = "粑粑",
-                atk = 1,
-                matk = 100,
-                itemType = ItemType.武器,
-                Description = "小黑拉的粑粑",
-                Count = 1,
-                Price = 100,
-                SellPrice = 1
-            });
-
-            weaponList.Add(new Weapon()
-            {
-                Lv = 1,
-                Name = "林克的小刀",
+                Name = "旧木剑",
                 atk = 2,
-                matk = 1,
+                matk = 0,
                 itemType = ItemType.武器,
-                Description = "好像生锈了",
+                Description = "已经破旧的木剑,据说是某位勇者用完后不用的废弃物品",
                 Count = 1,
-                Price = 100,
-                SellPrice = 1
+                Price = 10,
+                SellPrice = 5
+            });
+
+            weaponList.Add(new Weapon()
+            {
+                Lv = 1,
+                Name = "木剑",
+                atk = 5,
+                matk = 0,
+                itemType = ItemType.武器,
+                Description = "这把剑很新,几乎看不出什么端倪",
+                Count = 1,
+                Price = 12,
+                SellPrice = 6
+            });
+
+            weaponList.Add(new Weapon()
+            {
+                Lv = 1,
+                Name = "桃木剑",
+                atk = 8,
+                matk = 2,
+                itemType = ItemType.武器,
+                Description = "放在以前是某位仙人使用的桃木剑,但现在已经无人问津了",
+                Count = 1,
+                Price = 20,
+                SellPrice = 10
             });
             return weaponList;
         }
@@ -62,38 +62,38 @@ namespace MangoRPG_APP.Assets
                 Lv = 1,
                 Name = "皮衣",
                 def = 1,
-                mdef = 1,
+                mdef = 0,
                 itemType = ItemType.防具,
-                Description = "你好",
+                Description = "用动物皮制成,但现在基本很少了",
                 Count = 1,
-                Price = 100,
-                SellPrice = 1
+                Price = 10,
+                SellPrice = 2
             });
 
             armorList.Add(new Armor()
             {
                 Lv = 1,
-                Name = "Yeee",
-                def = -1,
-                mdef = -1,
+                Name = "旧勇者衣",
+                def = 3,
+                mdef = 0,
                 itemType = ItemType.防具,
-                Description = "你好",
+                Description = "经过岁月洗礼,却安然无恙的衣服,究竟是什么来头?",
                 Count = 1,
-                Price = 100,
-                SellPrice = 1
+                Price = 14,
+                SellPrice = 7
             });
 
             armorList.Add(new Armor()
             {
                 Lv = 1,
-                Name = "Yeeeeee",
+                Name = "铜盔甲",
                 def = 2,
                 mdef = 2,
                 itemType = ItemType.防具,
-                Description = "你好",
+                Description = "看似没什么太大问题,除了...",
                 Count = 1,
-                Price = 100,
-                SellPrice = 1
+                Price = 20,
+                SellPrice = 10
             });
             return armorList;
         }
@@ -148,12 +148,12 @@ namespace MangoRPG_APP.Assets
             IList<Enemy> enemiesList = new List<Enemy>();
             enemiesList.Add(new Enemy()
             {
-                Name = "测试敌人",
+                Name = "史莱姆",
                 Lv = 1,
-                Hp = 100,
-                Hpmax = 100,
-                Atk = 2,
-                Def = 0,
+                Hp = 20,
+                Hpmax = 20,
+                Atk = 1,
+                Def = 1,
                 Matk = 0,
                 Mdef = 0,
                 Money = 3,
