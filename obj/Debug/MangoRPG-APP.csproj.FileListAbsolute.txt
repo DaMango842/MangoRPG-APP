@@ -1,0 +1,3 @@
+D:\Project\VSProject\CSharp\MangoRPG-APP\obj\Debug\MangoRPG-APP.csproj.AssemblyReference.cache
+D:\Project\VSProject\CSharp\MangoRPG-APP\obj\Debug\MangoRPG-APP.csproj.SuggestedBindingRedirects.cache
+D:\Project\VSProject\CSharp\MangoRPG-APP\obj\Debug\MangoRPG-APP.csproj.CoreCompileInputs.cache
