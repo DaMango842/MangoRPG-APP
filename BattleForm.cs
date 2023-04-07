@@ -27,6 +27,9 @@ namespace MangoRPG_APP
         public BattleForm()
         {
             InitializeComponent();
+
+            this.ControlBox = false;
+
             liteDBHelper = new LiteDBHelper();
             var list = liteDBHelper.FindAll<Player>("user_data").ToList().Where(x => x.Name == "Mango");
             if (list.Count() > 0)
@@ -51,6 +54,10 @@ namespace MangoRPG_APP
         {
             var pDamage = (player.Atk + player.Matk) - currentEnemy.Def;
             currentEnemy.Hp -= pDamage;
+            if (currentEnemy.Hp < 0)
+            {
+                currentEnemy.Hp = 0;
+            }
             label41.Text = player.Name + " 对 " + currentEnemy.Name + " 造成" + pDamage + "点伤害!\r\n";
             label41.Text += currentEnemy.Name + "的血量为" + currentEnemy.Hp + "!\r\n";
 
@@ -60,6 +67,15 @@ namespace MangoRPG_APP
 
             var eDamage = (currentEnemy.Atk + currentEnemy.Matk) - (player.Def + player.Mdef);
             player.Hp -= eDamage;
+            if (player.Hp < 0)
+            {
+                player.Hp = 0;
+            }
+            else if (player.Hp > player.Hpmax)
+            {
+                player.Hp = player.Hpmax;
+            }
+            else { }
             label41.Text += currentEnemy.Name + " 对 " + player.Name + " 造成" + eDamage + "点伤害!\r\n";
             label41.Text += player.Name + "的血量为" + player.Hp + "!\r\n";
 
@@ -89,6 +105,7 @@ namespace MangoRPG_APP
                 label41.Text += "战斗胜利!";
                 player.Money += currentEnemy.Money;
                 player.Exp += currentEnemy.Exp;
+                textUpdate();
                 label41.Text += player.Name + "获得了 " + currentEnemy.Money + "金钱和 " + currentEnemy.Exp + "经验\r\n";
                 if (player.Exp >= player.Nextexp)
                 {
@@ -101,6 +118,8 @@ namespace MangoRPG_APP
                 }
 
                 liteDBHelper.Update(player, "user_data");
+
+                this.ControlBox = true;
             }
             else
             {
@@ -120,7 +139,21 @@ namespace MangoRPG_APP
         //逃跑
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Random r = new Random();
+            var runSuccessPoint = r.Next(0, 100);
+            if (runSuccessPoint >= 65)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                label41.Text = "逃跑成功!";
+                this.ControlBox = true;
+            }
+            else
+            {
+                label41.Text = "逃跑失败!";
+            }
         }
 
         private void textUpdate()

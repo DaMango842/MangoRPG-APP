@@ -501,6 +501,7 @@
             // 
             // button3
             // 
+            button3.Enabled = false;
             button3.Location = new Point(212, 339);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);
@@ -572,8 +573,8 @@
             Controls.Add(groupBox3);
             Name = "BattleForm";
             Text = "战斗界面";
-            Load += BattleForm_Load;
             FormClosing += BattleForm_FormClosing;
+            Load += BattleForm_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);

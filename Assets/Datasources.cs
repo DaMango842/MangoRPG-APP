@@ -161,12 +161,12 @@ namespace MangoRPG_APP.Assets
             });
             enemiesList.Add(new Enemy()
             {
-                Name = "测试敌人2",
+                Name = "骷髅",
                 Lv = 1,
                 Hp = 100,
                 Hpmax = 100,
-                Atk = 3,
-                Def = 1,
+                Atk = 4,
+                Def = 2,
                 Matk = 0,
                 Mdef = 0,
                 Money = 3,
@@ -174,12 +174,12 @@ namespace MangoRPG_APP.Assets
             });
             enemiesList.Add(new Enemy()
             {
-                Name = "测试敌人3",
+                Name = "小蝙蝠",
                 Lv = 1,
                 Hp = 100,
                 Hpmax = 100,
-                Atk = 3,
-                Def = 0,
+                Atk = 6,
+                Def = 3,
                 Matk = 0,
                 Mdef = 0,
                 Money = 4,

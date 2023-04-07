@@ -36,11 +36,11 @@ namespace MangoRPG_APP.Class
             Exp -= Nextexp;
             Lv += 1;
             Hpmax += random.Next(0, 30);
-            Manamax += random.Next(0, 30);
-            Atk += random.Next(0, 10);
-            Def += random.Next(0, 10);
-            Matk += random.Next(0, 10);
-            Mdef += random.Next(0, 10);
+            Manamax += random.Next(0, 30) - 10;
+            Atk += random.Next(0, 10) - 1;
+            Def += random.Next(0, 10) - 1;
+            Matk += random.Next(0, 10) - 2;
+            Mdef += random.Next(0, 10) - 2;
             
             Nextexp = Nextexp + random.Next(0, 10);
         }

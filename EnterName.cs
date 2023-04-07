@@ -37,7 +37,7 @@ namespace MangoRPG_APP
                     Def = 2,
                     Matk = 0,
                     Mdef = 0,
-                    Money = 2000000,
+                    Money = 200,
                     Exp = 0,
                     Nextexp = 10
                 };
