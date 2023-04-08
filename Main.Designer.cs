@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            startButton = new Button();
+            loadButton = new Button();
+            aboutButton = new Button();
+            exitButton = new Button();
             label2 = new Label();
             SuspendLayout();
             // 
@@ -48,49 +48,49 @@
             label1.TabIndex = 0;
             label1.Text = "MangoRPG";
             // 
-            // button1
+            // startButton
             // 
-            button1.Location = new Point(134, 352);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(174, 53);
-            button1.TabIndex = 1;
-            button1.Text = "开始游戏";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            startButton.Location = new Point(134, 352);
+            startButton.Margin = new Padding(4);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(174, 53);
+            startButton.TabIndex = 1;
+            startButton.Text = "开始游戏";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
-            // button2
+            // loadButton
             // 
-            button2.Location = new Point(315, 352);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(174, 53);
-            button2.TabIndex = 2;
-            button2.Text = "读取存档";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            loadButton.Location = new Point(315, 352);
+            loadButton.Margin = new Padding(4);
+            loadButton.Name = "loadButton";
+            loadButton.Size = new Size(174, 53);
+            loadButton.TabIndex = 2;
+            loadButton.Text = "读取存档";
+            loadButton.UseVisualStyleBackColor = true;
+            loadButton.Click += loadButton_Click;
             // 
-            // button3
+            // aboutButton
             // 
-            button3.Location = new Point(496, 352);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(174, 53);
-            button3.TabIndex = 3;
-            button3.Text = "关于游戏";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            aboutButton.Location = new Point(496, 352);
+            aboutButton.Margin = new Padding(4);
+            aboutButton.Name = "aboutButton";
+            aboutButton.Size = new Size(174, 53);
+            aboutButton.TabIndex = 3;
+            aboutButton.Text = "关于游戏";
+            aboutButton.UseVisualStyleBackColor = true;
+            aboutButton.Click += aboutButton_Click;
             // 
-            // button4
+            // exitButton
             // 
-            button4.Location = new Point(678, 352);
-            button4.Margin = new Padding(4);
-            button4.Name = "button4";
-            button4.Size = new Size(174, 53);
-            button4.TabIndex = 4;
-            button4.Text = "退出游戏";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            exitButton.Location = new Point(678, 352);
+            exitButton.Margin = new Padding(4);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(174, 53);
+            exitButton.TabIndex = 4;
+            exitButton.Text = "退出游戏";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // label2
             // 
@@ -108,10 +108,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1029, 529);
             Controls.Add(label2);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(exitButton);
+            Controls.Add(aboutButton);
+            Controls.Add(loadButton);
+            Controls.Add(startButton);
             Controls.Add(label1);
             ForeColor = Color.FromArgb(0, 0, 0, 0);
             Margin = new Padding(4);
@@ -124,10 +124,10 @@
         #endregion
 
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button startButton;
+        private Button loadButton;
+        private Button aboutButton;
+        private Button exitButton;
         private Label label2;
     }
 }

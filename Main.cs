@@ -11,8 +11,8 @@ namespace MangoRPG_APP
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        //开始
+        private void startButton_Click(object sender, EventArgs e)
         {
 
             EnterName enterName = new EnterName();
@@ -20,26 +20,45 @@ namespace MangoRPG_APP
             enterName.ShowDialog();
             Application.ExitThread();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        //读档
+        private void loadButton_Click(object sender, EventArgs e)
         {
-            LiteDBHelper liteDBHelper = new LiteDBHelper();
-            var list = liteDBHelper.FindAll<Player>("user_data").ToList().Where(x => x.Name == "Mango");
-
-            MessageBox.Show("存档读取成功");
-            Game game = new Game(list.First());
-            this.Hide();
-            game.ShowDialog();
-            Application.ExitThread();
+            //定位所在的文件
+            string savefile = Environment.CurrentDirectory + "\\mangorpg.db";
+            //判定是否存在该文件
+            if (File.Exists(savefile))
+            {
+                LiteDBHelper liteDBHelper = new LiteDBHelper();
+                var list = liteDBHelper.FindAll<Player>("user_data").ToList().Where(x => x.Name == "Mango");
+                //提示读档成功
+                MessageBox.Show("存档读取成功");
+                Game game = new Game(list.First());
+                this.Hide();
+                game.ShowDialog();
+                Application.ExitThread();
+            }
+            else //反之创建新游戏
+            {
+                MessageBox.Show("存档不存在!\r\n已为你跳转至新游戏");
+                EnterName enterName = new EnterName();
+                this.Hide();
+                enterName.ShowDialog();
+                Application.ExitThread();
+            }
+        }
+        //关于
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            //假关于界面
+            //MainAbout mainAbout = new MainAbout();
+            //mainAbout.ShowDialog();
+            //真关于界面
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Owner = this;
+            aboutForm.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MainAbout mainAbout = new MainAbout();
-            mainAbout.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Application.ExitThread();

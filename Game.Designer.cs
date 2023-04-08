@@ -35,6 +35,7 @@
             保存ToolStripMenuItem = new ToolStripMenuItem();
             保存存档ToolStripMenuItem = new ToolStripMenuItem();
             读取存档ToolStripMenuItem = new ToolStripMenuItem();
+            删除存档ToolStripMenuItem = new ToolStripMenuItem();
             存档笔记ToolStripMenuItem = new ToolStripMenuItem();
             系统ToolStripMenuItem = new ToolStripMenuItem();
             打开存档文件夹ToolStripMenuItem = new ToolStripMenuItem();
@@ -107,7 +108,7 @@
             // 
             // 保存ToolStripMenuItem
             // 
-            保存ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 保存存档ToolStripMenuItem, 读取存档ToolStripMenuItem, 存档笔记ToolStripMenuItem });
+            保存ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 保存存档ToolStripMenuItem, 读取存档ToolStripMenuItem, 删除存档ToolStripMenuItem, 存档笔记ToolStripMenuItem });
             保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             保存ToolStripMenuItem.Size = new Size(53, 24);
             保存ToolStripMenuItem.Text = "记录";
@@ -115,21 +116,28 @@
             // 保存存档ToolStripMenuItem
             // 
             保存存档ToolStripMenuItem.Name = "保存存档ToolStripMenuItem";
-            保存存档ToolStripMenuItem.Size = new Size(152, 26);
+            保存存档ToolStripMenuItem.Size = new Size(224, 26);
             保存存档ToolStripMenuItem.Text = "保存存档";
             保存存档ToolStripMenuItem.Click += 保存存档ToolStripMenuItem_Click;
             // 
             // 读取存档ToolStripMenuItem
             // 
             读取存档ToolStripMenuItem.Name = "读取存档ToolStripMenuItem";
-            读取存档ToolStripMenuItem.Size = new Size(152, 26);
+            读取存档ToolStripMenuItem.Size = new Size(224, 26);
             读取存档ToolStripMenuItem.Text = "读取存档";
             读取存档ToolStripMenuItem.Click += 读取存档ToolStripMenuItem_Click;
+            // 
+            // 删除存档ToolStripMenuItem
+            // 
+            删除存档ToolStripMenuItem.Name = "删除存档ToolStripMenuItem";
+            删除存档ToolStripMenuItem.Size = new Size(224, 26);
+            删除存档ToolStripMenuItem.Text = "删除存档";
+            删除存档ToolStripMenuItem.Click += 删除存档ToolStripMenuItem_Click;
             // 
             // 存档笔记ToolStripMenuItem
             // 
             存档笔记ToolStripMenuItem.Name = "存档笔记ToolStripMenuItem";
-            存档笔记ToolStripMenuItem.Size = new Size(152, 26);
+            存档笔记ToolStripMenuItem.Size = new Size(224, 26);
             存档笔记ToolStripMenuItem.Text = "存档笔记";
             // 
             // 系统ToolStripMenuItem
@@ -142,8 +150,9 @@
             // 打开存档文件夹ToolStripMenuItem
             // 
             打开存档文件夹ToolStripMenuItem.Name = "打开存档文件夹ToolStripMenuItem";
-            打开存档文件夹ToolStripMenuItem.Size = new Size(197, 26);
+            打开存档文件夹ToolStripMenuItem.Size = new Size(224, 26);
             打开存档文件夹ToolStripMenuItem.Text = "打开存档文件夹";
+            打开存档文件夹ToolStripMenuItem.Click += 打开存档文件夹ToolStripMenuItem_Click;
             // 
             // 设置ToolStripMenuItem1
             // 
@@ -633,5 +642,6 @@
         private Label label24;
         private Label label22;
         private Button button5;
+        private ToolStripMenuItem 删除存档ToolStripMenuItem;
     }
 }

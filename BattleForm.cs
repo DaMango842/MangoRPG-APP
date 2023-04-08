@@ -58,7 +58,18 @@ namespace MangoRPG_APP
             {
                 currentEnemy.Hp = 0;
             }
-            label41.Text = player.Name + " 对 " + currentEnemy.Name + " 造成" + pDamage + "点伤害!\r\n";
+            if (player.Hp > 0)
+            {
+                if (pDamage > 0)
+                {
+                    label41.Text = player.Name + " 对 " + currentEnemy.Name + " 造成" + pDamage + "点伤害!\r\n";
+                }
+                else
+                {
+                    label41.Text = player.Name + "失误了!\r\n";
+                }
+            }
+
             label41.Text += currentEnemy.Name + "的血量为" + currentEnemy.Hp + "!\r\n";
 
             textUpdate();
@@ -76,8 +87,19 @@ namespace MangoRPG_APP
                 player.Hp = player.Hpmax;
             }
             else { }
-            label41.Text += currentEnemy.Name + " 对 " + player.Name + " 造成" + eDamage + "点伤害!\r\n";
-            label41.Text += player.Name + "的血量为" + player.Hp + "!\r\n";
+
+            if (currentEnemy.Hp > 0)
+            {
+                if (eDamage > 0)
+                {
+                    label41.Text += currentEnemy.Name + " 对 " + player.Name + " 造成" + eDamage + "点伤害!\r\n";
+                }
+                else
+                {
+                    label41.Text += currentEnemy.Name + " 失误了!\r\n";
+                }
+                label41.Text += player.Name + "的血量为" + player.Hp + "!\r\n";
+            }
 
             textUpdate();
 
@@ -110,14 +132,20 @@ namespace MangoRPG_APP
                 if (player.Exp >= player.Nextexp)
                 {
                     player.LevelUp();
+                    label41.Text += "恭喜升级!\r\n";
+                    label41.Text += player.Name + "的各项属性提升了!\r\n";
                     label41.Text += "下个等级所需经验:" + (player.Nextexp - player.Exp) + "点经验\r\n";
+                    liteDBHelper.Update(player, "user_data");
+                    textUpdate();
                 }
                 else
                 {
                     label41.Text += "下个等级所需经验:" + (player.Nextexp - player.Exp) + "点经验\r\n";
+                    liteDBHelper.Update(player, "user_data");
+                    textUpdate();
                 }
 
-                liteDBHelper.Update(player, "user_data");
+                //liteDBHelper.Update(player, "user_data");
 
                 this.ControlBox = true;
             }
