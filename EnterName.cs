@@ -29,6 +29,7 @@ namespace MangoRPG_APP
                 {
                     Name = nameInput,
                     Lv = 1,
+                    LvMax = 10,
                     Hp = 100,
                     Hpmax = 100,
                     Mana = 0,

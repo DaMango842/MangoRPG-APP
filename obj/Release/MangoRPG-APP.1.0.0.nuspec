@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MangoRPG-APP</id>
+    <version>1.0.0</version>
+    <title>MangoRPG</title>
+    <authors>MangoRPG-APP</authors>
+    <description>Package Description</description>
+    <copyright>(C) 2022-2023 黑夜下的糖果酱</copyright>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="LiteDB" version="5.0.16" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Bson" version="2.19.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/Resources/Icon1.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\Project\VSProject\CSharp\MangoRPG-APP\bin\Release\net6.0-windows\MangoRPG-APP.runtimeconfig.json" target="lib\net6.0-windows7.0\MangoRPG-APP.runtimeconfig.json" />
+    <file src="D:\Project\VSProject\CSharp\MangoRPG-APP\bin\Release\net6.0-windows\MangoRPG-APP.dll" target="lib\net6.0-windows7.0\MangoRPG-APP.dll" />
+    <file src="D:\Project\VSProject\CSharp\MangoRPG-APP\Resources\Icon1.ico" target="content\Resources\Icon1.ico" />
+    <file src="D:\Project\VSProject\CSharp\MangoRPG-APP\Resources\Icon1.ico" target="contentFiles\any\net6.0-windows7.0\Resources\Icon1.ico" />
+  </files>
+</package>

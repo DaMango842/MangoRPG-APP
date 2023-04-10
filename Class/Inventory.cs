@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MangoRPG_APP.Class
+﻿namespace MangoRPG_APP.Class
 {
     // 这个类用作背包调用
     public class Inventory
@@ -19,6 +13,6 @@ namespace MangoRPG_APP.Class
         public int Count { get; set; }
 
         public int size { get; set; }
-        
+
     }
 }

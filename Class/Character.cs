@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MangoRPG_APP.Class
+﻿namespace MangoRPG_APP.Class
 {
     public class Character
     {

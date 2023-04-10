@@ -1,12 +1,5 @@
 ﻿using LiteDB;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Security.AccessControl;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace MangoRPG_APP.Utils
 {
@@ -71,7 +64,7 @@ namespace MangoRPG_APP.Utils
         }
 
         //查询Lite DB中的全部文档数据
-        public IList<BsonDocument> FindAll( string collectionName)
+        public IList<BsonDocument> FindAll(string collectionName)
         {
             using (var db = new LiteDatabase(DB.Path()))
             {
@@ -82,7 +75,7 @@ namespace MangoRPG_APP.Utils
         }
 
         //查询Lite DB中的全部文档数据，并转换成对象集合
-        public IList<T> FindAll<T>( string collectionName) where T : new()
+        public IList<T> FindAll<T>(string collectionName) where T : new()
         {
             using (var db = new LiteDatabase(DB.Path()))
             {

@@ -156,7 +156,7 @@ namespace MangoRPG_APP.Assets
                 Def = 1,
                 Matk = 0,
                 Mdef = 0,
-                Money = 3,
+                Money = 2,
                 Exp = 2
             });
             enemiesList.Add(new Enemy()
@@ -182,13 +182,96 @@ namespace MangoRPG_APP.Assets
                 Def = 3,
                 Matk = 0,
                 Mdef = 0,
-                Money = 4,
+                Money = 6,
                 Exp = 3
+            });
+            enemiesList.Add(new Enemy()
+            {
+                Name = "骷髅士兵",
+                Lv = 2,
+                Hp = 145,
+                Hpmax = 145,
+                Atk = 9,
+                Def = 5,
+                Matk = 0,
+                Mdef = 0,
+                Money = 8,
+                Exp = 4
+            });
+            enemiesList.Add(new Enemy()
+            {
+                Name = "魔化士兵",
+                Lv = 2,
+                Hp = 175,
+                Hpmax = 175,
+                Atk = 16,
+                Def = 12,
+                Matk = 8,
+                Mdef = 0,
+                Money = 10,
+                Exp = 5
+            });
+            enemiesList.Add(new Enemy()
+            {
+                Name = "骷髅骑士",
+                Lv = 2,
+                Hp = 200,
+                Hpmax = 200,
+                Atk = 18,
+                Def = 14,
+                Matk = 10,
+                Mdef = 0,
+                Money = 12,
+                Exp = 6
             });
 
             return enemiesList;
         }
 
+        public IList<Enemy> LoadBosses()
+        {
+            IList<Enemy> bossList = new List<Enemy>();
+            bossList.Add(new Enemy()
+            {
+                Name = "恶魔领袖",
+                Lv = 1,
+                Hp = 20,
+                Hpmax = 20,
+                Atk = 1,
+                Def = 1,
+                Matk = 0,
+                Mdef = 0,
+                Money = 3,
+                Exp = 2
+            });
+            bossList.Add(new Enemy()
+            {
+                Name = "骷髅国王",
+                Lv = 1,
+                Hp = 100,
+                Hpmax = 100,
+                Atk = 4,
+                Def = 2,
+                Matk = 0,
+                Mdef = 0,
+                Money = 3,
+                Exp = 3
+            });
+            bossList.Add(new Enemy()
+            {
+                Name = "???",
+                Lv = 100,
+                Hp = 999,
+                Hpmax = 999,
+                Atk = 999,
+                Def = 999,
+                Matk = 999,
+                Mdef = 999,
+                Money = 10847295,
+                Exp = 10847295
+            });
 
+            return bossList;
+        }
     }
 }

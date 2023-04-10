@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MangoRPG_APP.Class
+﻿namespace MangoRPG_APP.Class
 {
     public enum ItemType
     {
@@ -25,7 +19,7 @@ namespace MangoRPG_APP.Class
         public int SellPrice { get; set; }
     }
 
-    public class Weapon:Item
+    public class Weapon : Item
     {
         public int atk { get; set; }
         public int matk { get; set; }

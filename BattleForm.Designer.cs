@@ -574,7 +574,6 @@
             Name = "BattleForm";
             Text = "战斗界面";
             FormClosing += BattleForm_FormClosing;
-            Load += BattleForm_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
