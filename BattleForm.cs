@@ -21,16 +21,29 @@ namespace MangoRPG_APP
             if (list.Count() > 0)
             {
                 player = list.FirstOrDefault();
+
             }
+
             //加载敌人数据源
             enemyList = new Datasources().LoadEnemies();
             //随机取一个敌人
             int r = new Random().Next(enemyList.Count);
-            currentEnemy = enemyList[r];
+            currentEnemy = enemyList[r];     
+
+            if (player?.Name == string.Empty)            
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                label41.Text = "由于没有保存,自动略过";
+            }
+            
             //刷新
             textUpdate();
             //回合
             label40.Text = "玩家回合";
+
         }
         //攻击
         private void button1_Click(object sender, EventArgs e)

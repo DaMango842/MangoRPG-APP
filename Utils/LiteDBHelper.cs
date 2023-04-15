@@ -88,6 +88,8 @@ namespace MangoRPG_APP.Utils
     public class DB
     {
         //数据库文件路径
+        //这个我不知道怎么去改路径到%appdata%中
+        //如果有会的人来研究一下。
         public static string Path() => System.IO.Path.GetFullPath(System.AppDomain.CurrentDomain.BaseDirectory + string.Format("mangorpg.db"));
     }
 
